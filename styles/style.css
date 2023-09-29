@@ -1,3 +1,31 @@
 .hacker_noise{
     width: 20%;
 }
+body{
+    background: url('/background.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ramekochoro{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.ramekonati{
+    width: 300px;
+    height: 400px;
+    color: red;
+    background-color: beige;
+    border: rgb(72, 170, 231);
+    border-radius: 10px;
+
+}
+
+h1{
+    font-size: 90px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(157, 255, 0);
+
+}
