@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crazy Dave</title>
+</head>
+
+<body>
+
+    <img src="https://static.wikia.nocookie.net/plantsvszombies/images/3/34/Crazy_Dave_PvZ1.png">
+    <input type="text" id="userInput" placeholder="Type anything...">
+    <button onclick="showOutput()">Submit</button>
+    <div id="output"></div>
+    <script>
+        // Set cookie
+        document.cookie = "flag=theM7{P0PS7CL34N1UM_15_FUN}; path=/; SameSite=None; Secure";
+        function openIframeLink(url, newTab) {
+            if (newTab) {
+                if (!window.open(url, "_blank")) window.location = url;
+            } else window.location = url;
+        }
+        window.addEventListener("message", function (e) {
+            switch (e.data.name) {
+                case "crazyDave":
+                    openIframeLink(e.data.url, e.data.newTab);
+                    break;
+            }
+        }, false
+        );
+
+        const input = document.getElementById("userInput");
+        const output = document.getElementById("output");
+
+        function showOutput() {
+            output.innerText = "Crazy!!! you could open the console and perform self xss";
+        }
+
+
+        input.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                showOutput();
+            }
+        });
+
+    </script>
+
+
+</body>
+
+</html>
